@@ -1,2 +1,3 @@
 mail/.env
 auth/.env
+.gitignore
