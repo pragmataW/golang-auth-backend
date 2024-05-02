@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mail-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2001:2001"
+    env_file:
+      - .env
+    networks:
+      - auth
+
+networks:
+  auth:
+    external: true
